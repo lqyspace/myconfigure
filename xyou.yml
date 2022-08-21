@@ -164,6 +164,9 @@ proxy-groups:
 - name: "自动选择快速节点"
   type: url-test
   proxies:
+#     - "ss"
+#     - "ss-obfs"
+#     - "ss-v2ray"
     - "v2ray"
     - "trojan"
   url: 'http://www.gstatic.com/generate_204'
@@ -197,6 +200,9 @@ proxy-groups:
   type: select
   proxies:
     - "自动选择快速节点"
+#   - "ss"
+#   - "ss-obfs"
+#   - "ss-v2ray"
     - "v2ray"
     - "trojan"
 
@@ -221,6 +227,9 @@ proxy-groups:
   type: select
   proxies:
     - "PROXY"
+#   - "ss"
+#   - "ss-obfs"
+#   - "ss-v2ray"
     - "v2ray"
     - "trojan"
 # 大陆流媒体面向港澳台限定服务
@@ -228,6 +237,9 @@ proxy-groups:
   type: select
   proxies:
     - "DIRECT"
+#   - "ss"
+#   - "ss-obfs"
+#   - "ss-v2ray"
     - "v2ray"
     - "trojan"
 
