@@ -141,6 +141,23 @@ proxies:
   # ws-headers: #这一行后面不要写东西
   #   Host: v2ray.com # 填写伪装域名
 
+# VMess
+- name: "v2ray(Netflix)"
+  type: vmess
+  server: setup.beistu.xyz
+  port: 22358
+  uuid: 2024fb69-342a-4a9d-c0dd-cde6f1095748
+  alterId: 0
+  cipher: auto
+  # udp: true
+  tls: true
+  # skip-cert-verify: true
+  tls-hostname: setup.beistu.xyz
+  # network: ws
+  # ws-path: /
+  # ws-headers: #这一行后面不要写东西
+  #   Host: v2ray.com # 填写伪装域名
+  
 # Trojan
 - name: "trojan"
   type: trojan
@@ -167,6 +184,20 @@ proxies:
      - http/1.1
   skip-cert-verify: false
 
+# Trojan
+- name: "trojan(Netflix)"
+  type: trojan
+  server: 66.42.36.195
+  port: 51662
+  password: cjK4f1AJlB
+  # udp: true
+  sni: setup.beistu.xyz # 填写伪装域名
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: false
+
+
 
 
 # 代理组策略
@@ -183,6 +214,8 @@ proxy-groups:
     - "v2ray"
     - "trojan"
     - "trojan-xtls"
+    - "v2ray(Netflix)"
+    - "trojan(Netflix)"
   url: 'http://www.gstatic.com/generate_204'
   # 间隔 300ms 测一次
   interval: 300
@@ -220,6 +253,8 @@ proxy-groups:
     - "v2ray"
     - "trojan"
     - "trojan-xtls"
+    - "v2ray(Netflix)"
+    - "trojan(Netflix)"
 
 # 白名单模式 PROXY，黑名单模式 DIRECT
 - name: "Final"
@@ -248,6 +283,8 @@ proxy-groups:
     - "v2ray"
     - "trojan"
     - "trojan-xtls"
+    - "v2ray(Netflix)"
+    - "trojan(Netflix)"
 # 大陆流媒体面向港澳台限定服务
 - name: "HKMTMedia"
   type: select
@@ -259,6 +296,8 @@ proxy-groups:
     - "v2ray"
     - "trojan"
     - "trojan-xtls"
+    - "v2ray(Netflix)"
+    - "trojan(Netflix)"
 
 # 规则
 rules:
