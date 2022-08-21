@@ -712,6 +712,8 @@ rules:
 - DOMAIN-SUFFIX,bilibili.com,HKMTMedia
 - DOMAIN,upos-hz-mirrorakam.akamaized.net,HKMTMedia
 
+- DOMAIN-SUFFIX,99riav38.com,HKMTMedia
+
 # (DNS Cache Pollution Protection)
 # > Google
 - DOMAIN-SUFFIX,ampproject.org,PROXY
