@@ -705,7 +705,6 @@ rules:
 - DOMAIN-SUFFIX,youtube.com,GlobalMedia
 - DOMAIN,youtubei.googleapis.com,GlobalMedia
 - DOMAIN,mainnet.infura.io,GlobalMedia
-- DOMAIN-SUFFIX,99riav38.com,GlobalMedia
 - DOMAIN,raw.githubusercontent.com,GlobalMedia
 # (HKMTMedia)
 # > 愛奇藝台灣站
