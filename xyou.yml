@@ -86,46 +86,46 @@ proxies:
 #   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
 
 # Shadowsocks
-- name: "ss"
-  type: ss
-  server: server
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: "password"
-  # udp: true
+# - name: "ss"
+#   type: ss
+#   server: server
+#   port: 443
+#   cipher: chacha20-ietf-poly1305
+#   password: "password"
+#   # udp: true
 
 # Shadowsocks(simple-obfs)
-- name: "ss-obfs"
-  type: ss
-  server: server
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: "password"
-  plugin: obfs
-  plugin-opts:
-      mode: tls
-      host: example.com
+# - name: "ss-obfs"
+#   type: ss
+#   server: server
+#   port: 443
+#   cipher: chacha20-ietf-poly1305
+#   password: "password"
+#   plugin: obfs
+#   plugin-opts:
+#       mode: tls
+#       host: example.com
 
 # Shadowsocks(v2ray-plugin)
-- name: "ss-v2ray"
-  type: ss
-  server: server
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: "password"
-  plugin: v2ray-plugin
-  plugin-opts:
-    mode: websocket # no QUIC now
-    # tls: true # wss
-    # skip-cert-verify: true
-    # host: bing.com
-    # path: "/"
-    # mux: true
-    # headers:
-    #   custom: value
+# - name: "ss-v2ray"
+#   type: ss
+#   server: server
+#   port: 443
+#   cipher: chacha20-ietf-poly1305
+#   password: "password"
+#   plugin: v2ray-plugin
+#   plugin-opts:
+#     mode: websocket # no QUIC now
+#     # tls: true # wss
+#     # skip-cert-verify: true
+#     # host: bing.com
+#     # path: "/"
+#     # mux: true
+#     # headers:
+#     #   custom: value
 
 # VMess
-- name: "v2ray"
+- name: "国际视频"
   type: vmess
   server: merben.beistu.xyz
   port: 21779
@@ -134,7 +134,7 @@ proxies:
   cipher: auto
   # udp: true
   tls: true
-  # skip-cert-verify: true
+  skip-cert-verify: false
   tls-hostname: merben.beistu.xyz
   # network: ws
   # ws-path: /
@@ -142,7 +142,7 @@ proxies:
   #   Host: v2ray.com # 填写伪装域名
 
 # VMess
-- name: "v2ray(Netflix)"
+- name: "国际视频(Netflix)"
   type: vmess
   server: setup.beistu.xyz
   port: 22358
@@ -151,7 +151,7 @@ proxies:
   cipher: auto
   # udp: true
   tls: true
-  # skip-cert-verify: true
+  skip-cert-verify: false
   tls-hostname: setup.beistu.xyz
   # network: ws
   # ws-path: /
@@ -159,7 +159,7 @@ proxies:
   #   Host: v2ray.com # 填写伪装域名
   
 # Trojan
-- name: "trojan"
+- name: "大千世界"
   type: trojan
   server: 199.247.8.5
   port: 40576
@@ -172,7 +172,7 @@ proxies:
   skip-cert-verify: false
 
 # Trojan
-- name: "trojan-xtls"
+- name: "全球视野"
   type: trojan
   server: 199.247.8.5
   port: 18441
@@ -185,7 +185,7 @@ proxies:
   skip-cert-verify: false
 
 # Trojan
-- name: "trojan(Netflix)"
+- name: "国际流媒体(Netflix)"
   type: trojan
   server: 66.42.36.195
   port: 51662
@@ -211,11 +211,11 @@ proxy-groups:
 #     - "ss"
 #     - "ss-obfs"
 #     - "ss-v2ray"
-    - "v2ray"
-    - "trojan"
-    - "trojan-xtls"
-    - "v2ray(Netflix)"
-    - "trojan(Netflix)"
+    - "国际视频"
+    - "大千世界"
+    - "全球视野"
+    - "国际视频(Netflix)"
+    - "国际流媒体(Netflix)"
   url: 'http://www.gstatic.com/generate_204'
   # 间隔 300ms 测一次
   interval: 300
@@ -250,11 +250,11 @@ proxy-groups:
 #   - "ss"
 #   - "ss-obfs"
 #   - "ss-v2ray"
-    - "v2ray"
-    - "trojan"
-    - "trojan-xtls"
-    - "v2ray(Netflix)"
-    - "trojan(Netflix)"
+    - "国际视频"
+    - "大千世界"
+    - "全球视野"
+    - "国际视频(Netflix)"
+    - "国际流媒体(Netflix)"
 
 # 白名单模式 PROXY，黑名单模式 DIRECT
 - name: "Final"
@@ -280,11 +280,11 @@ proxy-groups:
 #   - "ss"
 #   - "ss-obfs"
 #   - "ss-v2ray"
-    - "v2ray"
-    - "trojan"
-    - "trojan-xtls"
-    - "v2ray(Netflix)"
-    - "trojan(Netflix)"
+    - "国际视频"
+    - "大千世界"
+    - "全球视野"
+    - "国际视频(Netflix)"
+    - "国际流媒体(Netflix)"
 # 大陆流媒体面向港澳台限定服务
 - name: "HKMTMedia"
   type: select
@@ -293,11 +293,11 @@ proxy-groups:
 #   - "ss"
 #   - "ss-obfs"
 #   - "ss-v2ray"
-    - "v2ray"
-    - "trojan"
-    - "trojan-xtls"
-    - "v2ray(Netflix)"
-    - "trojan(Netflix)"
+    - "国际视频"
+    - "大千世界"
+    - "全球视野"
+    - "国际视频(Netflix)"
+    - "国际流媒体(Netflix)"
 
 # 规则
 rules:
